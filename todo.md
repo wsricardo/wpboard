@@ -1,6 +1,9 @@
 # TODO
 
-## Javascript DOM and Events
+
+## References and Docs
+
+### Javascript DOM and Events
 
 * [Canvas and Touch Events](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events)
 
@@ -15,7 +18,7 @@
 *
 
 
-## Javascript Classes
+### Javascript Classes
 
 https://www.w3schools.com/js/js_classes.asp
 

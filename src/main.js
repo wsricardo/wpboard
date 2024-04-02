@@ -8,7 +8,11 @@
 */
 
 const canvas = document.getElementById("canvas");
+const viewport = document.getElementById("main");
 const ctx = canvas.getContext("2d");
+
+let offsetX;
+let offsetY;
 
 ctx.fillStyle = "white";
 ctx.strokeStyle = "white";
@@ -31,15 +35,21 @@ function download(){
 
 }
 
-// Listen event click in link for tag a with id "download-image"
+
 // Capture image for current screen.
 function brushHandle( ev ){
+    px = 0;
+    py = 0;
+    offsetX =  ev.offsetX;
+    offsetY =  ev.offsetY;
     
-    console.log( "event detected ")
-    console.log("Position: (" +   ev.screenX  + ", " +  ev.screenY + ")");
-    ctx.fillRect(ev.screenX  , ev.screenY, 5, 5);
-    console.log("event target", ev.target.offsetLeft, ev.target.offsetTop );
+    px = ev.clientX - canvas.getBoundingClientRect().x;
+    py = ev.clientY - canvas.getBoundingClientRect().y;
 
+    console.log("Position: (" +  ev.clientX  + ", " +  ev.clientY + ")");
+    ctx.fillRect(px, py, 2, 2);
+    console.log("event target", offsetX, offsetY );
+    
 }
 
 canvas.addEventListener("click", brushHandle );

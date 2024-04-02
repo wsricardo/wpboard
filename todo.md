@@ -15,6 +15,10 @@
 
 * [Drawing shapes with canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)
 
+* [UI Events Type Click](https://www.w3.org/TR/uievents/#event-type-click)
+
+* [Visual Viewport API](https://developer.mozilla.org/en-US/docs/Web/API/Visual_Viewport_API)
+
 
 ### Javascript Classes
 

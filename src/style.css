@@ -25,16 +25,16 @@
     padding: 0;
     border: 8px solid saddlebrown;
     /* 16px = 8px + 8px of border size plus canvas size.*/
-    width: 1216px; 
-    height: 916px;
+    width: 616px; 
+    height: 316px;
     
 }
 
 
 #canvas {
     background-color: #034306;
-    width: 1200px;
-    height: 900px;
+    width: 600px;
+    height: 300px;
     
     padding: 0;
     margin: 0;

@@ -1,0 +1,47 @@
+* {
+    margin: 0; padding: 0;
+    font-family: 'Arial', 'Sans-serif';
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    
+    
+}
+
+.head-board {
+    padding: 12px;
+    margin: 0 auto;
+
+}
+
+.screen-canvas {
+    display: block;
+    margin: auto;
+    padding: 0;
+    border: 8px solid saddlebrown;
+    /* 16px = 8px + 8px of border size plus canvas size.*/
+    width: 1216px; 
+    height: 916px;
+    
+}
+
+
+#canvas {
+    background-color: #034306;
+    width: 1200px;
+    height: 900px;
+    
+    padding: 0;
+    margin: 0;
+    
+}
+
+.footer-board {
+    padding: 0;
+}
+

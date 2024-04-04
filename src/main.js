@@ -43,7 +43,15 @@ function brushHandle( ev ){
     xa = canvas.getBoundingClientRect().left
     yc = canvas.getBoundingClientRect().top
 
-    ctx.fillRect(px, py, 2, 2);
+    offsetX =  ev.offsetX;// point canvas
+    offsetY =  ev.offsetY;//
+    
+   // px = (canvas.width/viewport.clientWidth)*ev.clientX - xa ;
+   // py = (canvas.height/viewport.clientHeight)*ev.clientY -yc ;
+    px = (canvas.height/canvas.width)*(ev.clientX - xa);
+    py = (canvas.height/canvas.width)*(ev.clientY - yc) ;
+    console.log("Position: (" + px  + ", " +  py + ")");
+    ctx.fillRect(parseInt(px), parseInt(py), 2, 2);
     console.log("event target", offsetX, offsetY );
     
 }

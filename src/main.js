@@ -40,13 +40,9 @@ function download(){
 function brushHandle( ev ){
     px = 0;
     py = 0;
-    offsetX =  ev.offsetX;
-    offsetY =  ev.offsetY;
-    
-    px = ev.clientX - canvas.getBoundingClientRect().x;
-    py = ev.clientY - canvas.getBoundingClientRect().y;
+    xa = canvas.getBoundingClientRect().left
+    yc = canvas.getBoundingClientRect().top
 
-    console.log("Position: (" +  ev.clientX  + ", " +  ev.clientY + ")");
     ctx.fillRect(px, py, 2, 2);
     console.log("event target", offsetX, offsetY );
     

@@ -1,5 +1,5 @@
 /*
-*   WBlackboard
+*   WPBoard
 *   Author: WSRicardo
 *   Blog: https://wsricardo.blogspot.com
 *   Youtube Channel: https://www.youtube.com/@wsricardo23
@@ -22,16 +22,6 @@ let py = 0;
 ctx.fillStyle = "white";
 ctx.strokeStyle = "white";
 ctx.imageSmoothingEnabled = true;
-//ctx.fillRect( 110, 10, 1, 10);
-
-/*
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineTo(25, 30);
-ctx.lineWidth = 1;
-ctx.stroke();
-*/
-
 
 // Download image for capture screen in blackboard.
 function download(){
@@ -64,8 +54,11 @@ function brushHandle( ev ){
     ctx.beginPath();
     ctx.moveTo(px,py);
     ctx.lineTo(x,y );
+    //ctx.arc(x, y, 1, 0,  2*Math.PI );
     ctx.stroke();
+    //ctx.fill()
     ctx.closePath();
+    console.log("(px, py) = " + "("+px + ","+py + ")" + "(x,y) = "+ "("+x+", "+y+" )")
     
 }
 
@@ -74,6 +67,7 @@ function brushHandle( ev ){
     isPressed = true;
     brushHandle( ev );
 } );*/
+
 canvas.addEventListener("pointerdown", function( ev ){
     xa = canvas.getBoundingClientRect().left
     yc = canvas.getBoundingClientRect().top
@@ -90,50 +84,4 @@ canvas.addEventListener("pointermove", function( ev ){
 });
 canvas.addEventListener("pointerup", (ev) => { isPressed = false; x= 0; y = 0 }); // Notation: arrow function,  () => {}
 
-
-// Touch & (pen) Events
-/*
-// Touchstart -> started touch on surface
-canvas.addEventListener("touchstart", ( ev ) => {
-    ev.preventDefault();
-    const touches = ev.changedTouches;
-
-    var touch = ev.touches;
-
-    xa = canvas.getBoundingClientRect().left
-    yc = canvas.getBoundingClientRect().top
-    px = (canvas.height/canvas.width)*(touch.clientX - xa);
-    py = (canvas.height/canvas.width)*(touch.clientY - yc);
-    
-    isPressed = true;
-    
-});
-
-// Touched move throw surface.
-canvas.addEventListener("touchmove", ( ev ) => {
-    ev.preventDefault();
-    if ( isPressed )
-        brushHandle( ev );
-});
-
-// End touch. touch is false for isPressed with value false.
-canvas.addEventListener("touchend", ( ev ) => {
-    ev.preventDefault();
-    isPressed = false;
-    x = 0;
-    y = 0;
-});*/
 // ------
-
-/*
-*   Create digital blackboard for drawing figures and paint.
-*/
-class Board {
-    // Constructor method
-    constructor(){}
-
-    // Other methods for create and update e rendering.
-    //...
-
-
-}

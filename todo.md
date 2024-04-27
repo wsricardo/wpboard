@@ -19,6 +19,8 @@
 
 * [Visual Viewport API](https://developer.mozilla.org/en-US/docs/Web/API/Visual_Viewport_API)
 
+* [ImageData, data from canvas screen](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/putImageData)
+
 
 ### Javascript Classes
 

@@ -31,14 +31,17 @@
 }
 
 
-#canvas {
+#canvas, .canvas {
     background-color: #034306;
     width: 600px;
     height: 300px;
-    
     padding: 0;
     margin: 0;
     
+}
+
+#canvas-* {
+    visibility: hidden;
 }
 
 .footer-board {
